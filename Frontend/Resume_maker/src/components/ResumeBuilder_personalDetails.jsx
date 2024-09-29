@@ -5,7 +5,7 @@ const BUTTON_CLASS = 'p-2 rounded';
 const CONTAINER_CLASS = 'bg-gray-100 p-6 rounded-lg shadow-md';
 const TEXT_CLASS = 'text-gray-600';
 
-const ResumeBuilder = () => {
+const ResumeBuilder = ({ onNext }) => {
     return (
         <div className={CONTAINER_CLASS}>
             <h1 className="text-lg font-bold mb-4">Resume Builder</h1>
@@ -54,7 +54,7 @@ const ResumeBuilder = () => {
             </div>
             <div className="flex justify-between mt-4">
                 <button className={`bg-gray-300 ${TEXT_CLASS} ${BUTTON_CLASS}`}>BACK</button>
-                <button className={`bg-blue-500 text-white ${BUTTON_CLASS}`}>NEXT</button>
+                <button className={`bg-blue-500 text-white ${BUTTON_CLASS}`} onClick={onNext}>NEXT</button>
             </div>
             <p className={`text-sm ${TEXT_CLASS} mt-2`}>Page 1</p>
         </div>
