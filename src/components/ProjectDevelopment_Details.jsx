@@ -21,7 +21,11 @@ const ProjectForm = ({ onBack, onNext }) => {
 
     const handleNext = () => {
         if (projects.every(project => project.title && project.link && project.description)) {
+<<<<<<< HEAD
             onNext();  // Call onNext when the form i s properly filled
+=======
+            onNext();  // Call onNext when the form is properly filled
+>>>>>>> origin/dev-saloni
         } else {
             alert('Please fill in all project details.');
         }
