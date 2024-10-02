@@ -25,11 +25,12 @@ const ProjectForm = ({ onBack, onNext }) => {
         } else {
             alert('Please fill in all project details.');
         }
+       
     };
 
     return (
         <div className="container mx-auto p-4">
-            <h2 className="text-xl font-bold mb-4">Projects Developed</h2>
+            <h2 className="text-xl font-bold mb-4">Projects Developede</h2>
             <div id="project-list">
                 {projects.map((project, index) => (
                     <div key={index} className={projectContainerClasses}>
