@@ -3,11 +3,13 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
-const resumeRoutes = require('./routes/resumeRoute');
 require('dotenv').config();
-const mongoose = require('mongoose');
+const resumeRoutes = require('./routes/resumeRoute');
 const educationRoutes = require('./routes/educationRoute');
 const ProjectRoutes = require('./routes/projectRoutes');
+const experienceRoutes = require('./routes/experienceRoute');
+const extraDetailsRoutes = require('./routes/extraDetailsRoute'); 
+require('dotenv').config();
 
 // Load environment variables
 require('dotenv').config();
@@ -27,6 +29,10 @@ app.use(express.json());
 app.use('/api/resume', resumeRoutes);
 app.use('/api/education', educationRoutes);
 app.use('/api/projects', ProjectRoutes);
+
+app.use('/api/experience', experienceRoutes);
+app.use('/api/extra-details', extraDetailsRoutes); 
+
 
 
 
